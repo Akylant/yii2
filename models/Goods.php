@@ -51,13 +51,4 @@ class Goods extends \yii\db\ActiveRecord
             'date_create' => Yii::t('app', 'Date Create'),
         ];
     }
-
-    /**
-     * @inheritdoc
-     * @return \app\models\query\GoodsQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new \app\models\query\GoodsQuery(get_called_class());
-    }
 }
