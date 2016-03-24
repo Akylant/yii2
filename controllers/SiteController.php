@@ -2,8 +2,11 @@
 
 namespace app\controllers;
 
+<<<<<<< HEAD
 use app\models\Goods;
 use app\models\User;
+=======
+>>>>>>> 1c1df5667a70a732ea145d4c75882b5f35845acd
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -93,6 +96,7 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+<<<<<<< HEAD
 
     public function actionGetgoodsbyemailprovider($id)
     {
@@ -101,4 +105,6 @@ class SiteController extends Controller
             ->asArray()
             ->all();
     }
+=======
+>>>>>>> 1c1df5667a70a732ea145d4c75882b5f35845acd
 }
