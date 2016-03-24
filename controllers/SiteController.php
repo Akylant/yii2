@@ -51,10 +51,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        if(Yii::$app->user->isGuest)
-            return $this->render('index');
-        else
-            return $this->redirect("/note/mynotes", 301);
+        return $this->render('index');
     }
 
     public function actionLogin()
@@ -95,5 +92,13 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionGetgoodsbyemailprovider($id)
+    {
+        Goods::find()->
+            withEmailProvider($id)
+            ->asArray()
+            ->all();
     }
 }
